@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Client</title>
+</head>
+
+<body>
+    <h1>Hello depuis Nginx (static)</h1>
+    <pre id="out">Loading...</pre>
+    <script>
+        fetch('/api/health').then(r => r.json()).then(d => {
+            document.getElementById('out').textContent = JSON.stringify(d, null, 2);
+        }).catch(e => { document.getElementById('out').textContent = e.toString(); });
+    </script>
+</body>
+
+</html>
