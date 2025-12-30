@@ -3,11 +3,11 @@
 Durée cible : **75 minutes**  
 Technos : **Node.js, Express, JSON** (+ tests via Postman/Thunder Client/curl)
 
-> Objectif : apprendre à **prévoir les erreurs plutôt que les subir**, et à **centraliser** la gestion des erreurs via un middleware global.
+Objectif : apprendre à **prévoir les erreurs plutôt que les subir**, et à **centraliser** la gestion des erreurs via un middleware global.
 
 ---
 
-## 🎯 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de l’activité, tu sais :
 
@@ -19,7 +19,7 @@ Technos : **Node.js, Express, JSON** (+ tests via Postman/Thunder Client/curl)
 
 ---
 
-## 🧱 Structure de base (projet)
+## Structure de base (projet)
 
 La structure attendue (ou déjà présente dans ton dossier de départ) :
 
@@ -29,11 +29,11 @@ defensive-express/
 └─ server.js
 ```
 
-> Si ton dossier 7zip contient déjà ces fichiers, garde-les et complète simplement les TODO.
+> Ton dossier 7zip contient déjà ces fichiers, garde-les et complète simplement les TODO.
 
 ---
 
-## ✅ Préparation (10’)
+## Préparation (10’)
 
 ### 1) Installer les dépendances
 
@@ -70,7 +70,7 @@ npm run dev
 
 ---
 
-## 🟦 Starter `server.js` (à compléter)
+## Starter `server.js` (à compléter)
 
 Copie/colle si besoin (ou compare avec ton fichier) :
 
@@ -104,7 +104,7 @@ app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`)
 
 ---
 
-## 🧩 Partie A — Programmation défensive (20’)
+## Partie A — Programmation défensive (20’)
 
 ### A1) Créer `POST /divide`
 
@@ -138,7 +138,7 @@ Exemples :
 
 ---
 
-## 💥 Partie B — Simuler une erreur serveur (10’)
+## Partie B — Simuler une erreur serveur (10’)
 
 ### B1) Créer `GET /boom`
 
@@ -148,7 +148,7 @@ Objectif : vérifier que ton middleware global capture bien l’erreur.
 
 ---
 
-## 🛡️ Partie C — Middleware global d’erreurs (20’)
+## Partie C — Middleware global d’erreurs (20’)
 
 ### C1) Ajouter le middleware global (tout en bas, après les routes)
 
@@ -173,7 +173,7 @@ app.use((err, req, res, next) => {
 
 ---
 
-## 🚫 Partie D — 404 propre (10’)
+## Partie D — 404 propre (10’)
 
 Ajouter un middleware 404 **avant** le middleware d’erreur :
 
@@ -189,7 +189,7 @@ Test :
 
 ---
 
-## ⏳ Partie E — Erreurs asynchrones (15’)
+## Partie E — Erreurs asynchrones (15’)
 
 ### E1) Créer `GET /async-boom`
 
@@ -212,7 +212,7 @@ Test :
 
 ---
 
-## ✅ Checklist de validation
+## Checklist de validation
 
 - [ ] `/health` répond `{ ok: true }`
 - [ ] `/divide` fonctionne avec `a` et `b` valides
@@ -226,7 +226,7 @@ Test :
 
 ---
 
-## 🚀 Bonus
+## Bonus
 
 1. **Classe d’erreur HTTP**
    - créer une classe `HttpError` avec `statusCode`
@@ -243,7 +243,7 @@ Test :
 
 ---
 
-## 📌 Rappel sécurité
+## Rappel sécurité
 
 **Les erreurs détaillées sont pour les développeurs, pas pour les utilisateurs.**  
 En prod : message neutre côté client + logs côté serveur.
